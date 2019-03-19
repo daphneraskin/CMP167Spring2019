@@ -1,3 +1,8 @@
+/*Author: Daphne Raskin
+*Summary: Practice creating static methods
+*Date: March 19th, 2019
+*/
+
 import java.util.Scanner;
 public class Week8 {
 	static Scanner scnr = new Scanner(System.in);
