@@ -35,7 +35,7 @@ public class d{
          else {
         	 System.out.println("Invalid calculator mode.");
         	 System.out.println("Enter the calculator mode: Standard/Scientific?");
-        	 operation = scnr.next();
+        	 calcMode = scnr.next();
             	while ( (!calcMode.equals("Scientific")) || (!calcMode.equals("scientific")) || (!calcMode.equals("Standard")) || (!calcMode.equals("standard"))) {
             		System.out.println("Invalid calculator mode.");
             		System.out.println("Enter the calculator mode: Standard/Scientific?" );
@@ -155,3 +155,4 @@ public class d{
          }
       }
    }
+
