@@ -126,7 +126,6 @@ public class Grades {
 		return numAbove;
 	}
 	public static void rotateElements(int[] arr) {
-		//Yanilda did this one. It is correct.
 		int last = arr[arr.length-1];
 		for (int i = arr.length-1; i>0; i--) {
 			arr[i] = arr[i-1];
@@ -144,13 +143,11 @@ public class Grades {
 		}
 	}
 	public static void main(String[] args) {
-		int num;
-		boolean continuee = true;
-		while (continuee) {
-			System.out.print("Enter a grade: ");
-			num = scnr.nextInt();
-			if (num<=0) {
-			}
-		}
+		int n = 0;
+		while(n==-2) {
+			int[] arr = new int[100];
+			int size = readGrades(arr);
+			int MaxGrade = maxValue(arr);
+			int MinGrade = minValue(arr);			
 	}
 }
