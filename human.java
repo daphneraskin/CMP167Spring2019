@@ -1,25 +1,54 @@
 public class human {
-	public int age;
-	public String name;
-	public double wealth;
-	public boolean hasVehicle;
-	public double hunger;
-	public int food;
-	public vehicle[] vehicles;
+	// wE HAVE AC HIEVED ENCAPSULATION BY HAVING OUR INSTANCE VARIABLE PRIVATE
+	// wE THEN WILL PROVIDE SETTERS AND GETTERS TO PROVIDE ACCESS
+	private int age;//Instance variables belong to the object
+	private String name;
+	private double wealth;
+	private boolean hasVehicle;
+	private double hunger;
+	private int food;
+	private vehicle[] vehicles; //array of vehicles
 	
-	public human() {
-		this.age = 0;
+	public human() { //constructor new Human()
+		this.age = 0;//this refers to the object, or instantiation of the class
 		this.name = "";
 		this.wealth = 0.0;
 		this.hasVehicle = false;
 		this.hunger = 5.0;
 		this.food = 5;
-		this.vehicle = new vehicle[100];
+		this.vehicles = new vehicle[100];
 	}
+	
+	public human(String name, int age) {//Overloaded Constructor
+		this.age = age;
+		this.name = name;
+		this.wealth = 0.0;
+		this.hasVehicle = false;
+		this.hunger = 5.0;
+		this.food = 5;
+		this.vehicles = new vehicle[100];
+	}
+	public int getAge() { 
+		return this.age;
+	}
+	public String getName() {
+		return this.name;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Human:[name: " + getName() + ", age: "+ getAge() + ", wealth: " + this.wealth+ "$]";
+	}
+	
 	public int numberOFVehicles() {
 		int total = 0;
-		for (int i = 0; i<vehicle; i++) {
-				if (vehicle[i] != null)
+		for (int i = 0; i<vehicles.length; i++) {
+				if (vehicles[i] != null)
 					total++;
 		}
 		return total;
@@ -35,6 +64,9 @@ public class human {
 			System.out.println("Yummy, I ate all");
 		}
 		else System.out.println("Not enough food. Please buy food");
+	}
+	public void eat(int food) {
+		hunger -= food/4.5;
 	}
 	public void work(){
 		if (hunger<5) {
